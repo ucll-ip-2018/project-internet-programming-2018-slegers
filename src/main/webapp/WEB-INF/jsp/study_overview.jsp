@@ -7,10 +7,16 @@
 <body>
 <main>
     <jsp:include page="header.jsp"/>
-    <div class="main">
-        <h1>Under construction</h1>
-
-    </div>
+        <table>
+            <tr class="header">
+                <th> ID </th>
+                <th> Dag</th>
+                <th> Vak </th>
+                <th> Tijd</th>
+                <th> Les?</th>
+                <th> Verwijder</th>
+            </tr>
+        </table>
 </main>
 </body>
 </html>
