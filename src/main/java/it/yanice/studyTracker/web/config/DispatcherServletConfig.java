@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("it.yanice.studyTracker.controller")
+@ComponentScan("it.yanice.studyTracker.web.controller")
 public class DispatcherServletConfig implements WebMvcConfigurer{
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -20,7 +20,7 @@ public class DispatcherServletConfig implements WebMvcConfigurer{
     }
 
     @Bean
-    public InternalResogurceViewResolver getViewResolver() {
+    public InternalResourceViewResolver getViewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/jsp/");

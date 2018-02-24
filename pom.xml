@@ -16,7 +16,6 @@
         <maven.war.version>2.3</maven.war.version>
         <spring.version>5.0.3.RELEASE</spring.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -58,5 +57,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
