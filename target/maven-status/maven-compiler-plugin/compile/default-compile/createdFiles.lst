@@ -1,0 +1,12 @@
+it/yanice/studyTracker/web/controller/StudyOverview.class
+it/yanice/studyTracker/web/controller/AddCours.class
+it/yanice/studyTracker/web/controller/AddStudy.class
+it/yanice/studyTracker/web/config/WebInitializer.class
+it/yanice/studyTracker/domain/Cours.class
+it/yanice/studyTracker/web/config/ApplicationConfig.class
+it/yanice/studyTracker/db/Coursdb.class
+it/yanice/studyTracker/services/StudyTrackerService.class
+it/yanice/studyTracker/web/controller/CourseController.class
+it/yanice/studyTracker/web/controller/Summary.class
+it/yanice/studyTracker/db/CoursMemoryDb.class
+it/yanice/studyTracker/web/config/DispatcherServletConfig.class

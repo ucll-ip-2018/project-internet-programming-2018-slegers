@@ -5,7 +5,7 @@ public class Cours {
     private int studyPoints;
     private int semester;
 
-    public Cours(String name, int StudyPoints, int semester){
+    public Cours(String name, int studyPoints, int semester){
         setName(name);
         setStudyPoints(studyPoints);
         setSemester(semester);
@@ -19,7 +19,7 @@ public class Cours {
     }
 
     public void setStudyPoints(int studyPoints) {
-        if(studyPoints <=0 ){
+        if(studyPoints <= 0 ){
             throw new IllegalArgumentException("The studypoints should be strict positive.");
         }
         this.studyPoints = studyPoints;
@@ -39,6 +39,7 @@ public class Cours {
     public int getStudyPoints(){
         return studyPoints;
     }
+
     public int getSemester(){
         return semester;
     }

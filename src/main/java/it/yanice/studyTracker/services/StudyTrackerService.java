@@ -4,6 +4,8 @@ import it.yanice.studyTracker.db.CoursMemoryDb;
 import it.yanice.studyTracker.db.Coursdb;
 import it.yanice.studyTracker.domain.Cours;
 
+import java.util.Collection;
+
 public class StudyTrackerService {
     private Coursdb coursdb;
 
@@ -20,5 +22,12 @@ public class StudyTrackerService {
 
     public void editCours(Cours cours){
         coursdb.delete(cours);
+    }
+
+    public Cours getCours(String coursname){
+        return coursdb.getCours(coursname);
+    }
+    public Collection<Cours> getCourses(){
+        return coursdb.getCourses();
     }
 }
