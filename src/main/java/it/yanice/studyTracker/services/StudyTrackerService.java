@@ -20,7 +20,7 @@ public class StudyTrackerService {
         coursdb.delete(cours);
     }
 
-    public void editCours(Cours cours){
+    public void UpdateCours(Cours cours){
         coursdb.delete(cours);
     }
 
