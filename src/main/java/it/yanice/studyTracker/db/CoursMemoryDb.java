@@ -5,7 +5,7 @@ import it.yanice.studyTracker.domain.Cours;
 import java.util.Collection;
 import java.util.HashMap;
 
-public class CoursMemoryDb implements Coursdb {
+public class CoursMemoryDb implements Coursedb {
 
     private HashMap<String,Cours> courses;
 

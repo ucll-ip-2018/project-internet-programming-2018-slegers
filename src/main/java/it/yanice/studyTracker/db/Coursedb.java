@@ -4,7 +4,7 @@ import it.yanice.studyTracker.domain.Cours;
 
 import java.util.Collection;
 
-public interface Coursdb {
+public interface Coursedb {
 
      void insert(Cours cours);
      void delete(Cours cours);

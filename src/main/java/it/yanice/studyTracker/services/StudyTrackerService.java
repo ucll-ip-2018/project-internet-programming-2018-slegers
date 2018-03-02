@@ -1,33 +1,32 @@
 package it.yanice.studyTracker.services;
-
-import it.yanice.studyTracker.db.CoursMemoryDb;
-import it.yanice.studyTracker.db.Coursdb;
+import it.yanice.studyTracker.db.Coursedb;
+import it.yanice.studyTracker.db.DbFactory;
 import it.yanice.studyTracker.domain.Cours;
 
 import java.util.Collection;
 
 public class StudyTrackerService {
-    private Coursdb coursdb;
+    private Coursedb coursedb;
 
     public StudyTrackerService(){
-        coursdb = new CoursMemoryDb();
+        coursedb = new DbFactory().getDB("CoursMemoryDb");
     }
 
     public void insertCours(Cours cours){
-        coursdb.insert(cours);
+        coursedb.insert(cours);
     }
     public void deleteCours(Cours cours){
-        coursdb.delete(cours);
+        coursedb.delete(cours);
     }
 
     public void UpdateCours(Cours cours){
-        coursdb.delete(cours);
+        coursedb.delete(cours);
     }
 
     public Cours getCours(String coursname){
-        return coursdb.getCours(coursname);
+        return coursedb.getCours(coursname);
     }
     public Collection<Cours> getCourses(){
-        return coursdb.getCourses();
+        return coursedb.getCourses();
     }
 }

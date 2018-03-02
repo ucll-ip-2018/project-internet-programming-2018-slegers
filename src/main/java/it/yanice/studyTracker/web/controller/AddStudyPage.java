@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
+import javax.ws.rs.GET;
 
 @Controller
-@RequestMapping(value = "/study_overview")
-public class StudyOverview {
+@RequestMapping("/study_add")
+public class AddStudyPage {
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView getStudyOverview(){
-        return new ModelAndView("study_overview","study_overview",new ArrayList<>());
+    public ModelAndView getAddStudy(){
+        return new ModelAndView("study_add","study_add",null);
     }
 }
