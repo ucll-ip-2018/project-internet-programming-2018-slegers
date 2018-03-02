@@ -31,7 +31,7 @@ public class CoursTest {
     @Test
     public void setSemester() throws Exception {
         cn1.setSemester(1);
-        assertEquals(1,cn1.getStudyPoints());
+        assertEquals(1,cn1.getSemester());
     }
 
     @Test(expected = IllegalArgumentException.class)
