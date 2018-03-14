@@ -3,7 +3,7 @@ import it.yanice.studyTracker.domain.StudyMoment;
 
 import java.util.List;
 
-public interface StudyMomentDb extends Db{
+public interface StudyMomentDb {
     void insert(StudyMoment moment);
     void delete(StudyMoment moment);
     void edit(StudyMoment moment);

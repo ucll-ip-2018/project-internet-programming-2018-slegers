@@ -2,10 +2,9 @@ package it.yanice.studyTracker.db;
 
 import it.yanice.studyTracker.domain.Cours;
 
-import java.util.Collection;
 import java.util.List;
 
-public interface CourseDb extends Db {
+public interface CourseDb {
 
      void insert(Cours cours);
      void delete(Cours cours);

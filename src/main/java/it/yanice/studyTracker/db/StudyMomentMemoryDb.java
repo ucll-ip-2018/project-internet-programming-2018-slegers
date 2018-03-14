@@ -1,5 +1,6 @@
 package it.yanice.studyTracker.db;
 
+import it.yanice.studyTracker.domain.Cours;
 import it.yanice.studyTracker.domain.StudyMoment;
 
 import java.util.ArrayList;
@@ -12,6 +13,12 @@ public class StudyMomentMemoryDb implements StudyMomentDb {
 
     public StudyMomentMemoryDb(){
         studyMomentMap = new HashMap<>();
+        Cours cn1 = new Cours("Computernetwerken 2",5,2);
+        insert(new StudyMoment(1,cn1,2,0,"30/06/1995"));
+        insert(new StudyMoment(2,cn1,3,0,"30/06/1995"));
+        insert(new StudyMoment(2,cn1,4,0,"30/06/1995"));
+
+
     }
 
     @Override

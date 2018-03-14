@@ -13,6 +13,7 @@ public class StudyMoment {
     }
 
     public StudyMoment(int id, Cours cours, int hours,int minutes, String date){
+        setId(id);
         setCours(cours);
         setHours(hours);
         setMinutes(minutes);

@@ -18,7 +18,7 @@
 <main>
     <jsp:include page="header.jsp"/>
 
-    <c:forEach var="c" items="${c}">
+    <c:forEach var="c" items="${courses}">
         <div class="circle">
             <div class="circleText"> ${c[name]} </div>
             <div class="circleNumb">

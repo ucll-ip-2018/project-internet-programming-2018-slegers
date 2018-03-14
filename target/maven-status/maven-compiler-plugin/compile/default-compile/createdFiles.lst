@@ -1,4 +1,5 @@
 it/yanice/studyTracker/db/DbFactory.class
+it/yanice/studyTracker/domain/StudyMoment.class
 it/yanice/studyTracker/web/controller/AddCoursPage.class
 it/yanice/studyTracker/web/controller/AddStudyPage.class
 it/yanice/studyTracker/web/controller/CourseController.class
@@ -6,9 +7,11 @@ it/yanice/studyTracker/db/CoursMemoryDb.class
 it/yanice/studyTracker/web/config/DispatcherServletConfig.class
 it/yanice/studyTracker/db/DbException.class
 it/yanice/studyTracker/web/controller/StudyOverviewPage.class
-it/yanice/studyTracker/db/Coursedb.class
 it/yanice/studyTracker/web/config/WebInitializer.class
+it/yanice/studyTracker/db/StudyMomentDb.class
 it/yanice/studyTracker/domain/Cours.class
 it/yanice/studyTracker/web/config/ApplicationConfig.class
+it/yanice/studyTracker/db/StudyMomentMemoryDb.class
 it/yanice/studyTracker/services/StudyTrackerService.class
 it/yanice/studyTracker/web/controller/SummaryPage.class
+it/yanice/studyTracker/db/CourseDb.class

@@ -8,7 +8,8 @@
 <body>
 <main>
     <jsp:include page="header.jsp"/>
-        <table>
+    <div class="main">
+    <table>
             <tr class="header">
                 <th> ID </th>
                 <th> Dag</th>
@@ -17,10 +18,19 @@
                 <th> Les?</th>
                 <th> Verwijder</th>
             </tr>
-            <c:forEach var="moment" items="moments">
-
+            <c:forEach var="moment" items="${moments}">
+             <tr>
+                <td>${moment.id}</td>
+                <td>${moment.date}</td>
+                <td>${moment.cours.name
+                }</td>
+                <td>${moment.hours}u${moment.minutes}</td>
+                <td>Ja</td>
+                <td><a href="">delete</a></td>
+             </tr>
             </c:forEach>
         </table>
+    </div>
 </main>
 </body>
 </html>
