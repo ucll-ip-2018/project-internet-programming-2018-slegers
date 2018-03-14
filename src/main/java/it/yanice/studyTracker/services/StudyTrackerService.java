@@ -4,6 +4,7 @@ import it.yanice.studyTracker.db.DbFactory;
 import it.yanice.studyTracker.domain.Cours;
 
 import java.util.Collection;
+import java.util.List;
 
 public class StudyTrackerService {
     private Coursedb coursedb;
@@ -26,7 +27,7 @@ public class StudyTrackerService {
     public Cours getCours(String coursname){
         return coursedb.getCours(coursname);
     }
-    public Collection<Cours> getCourses(){
+    public List<Cours> getCourses(){
         return coursedb.getCourses();
     }
 }

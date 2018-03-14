@@ -1,9 +1,16 @@
 package it.yanice.studyTracker.domain;
 
+import org.springframework.context.annotation.Bean;
+
+
 public class Cours {
     private String name;
     private int studyPoints;
     private int semester;
+
+    public Cours(){
+
+    }
 
     public Cours(String name, int studyPoints, int semester){
         setName(name);

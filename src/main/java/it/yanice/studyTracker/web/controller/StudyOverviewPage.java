@@ -14,12 +14,13 @@ import java.util.ArrayList;
 public class StudyOverviewPage {
 
     private StudyTrackerService service;
+
     public StudyOverviewPage(@Autowired StudyTrackerService service){
         this.service = service;
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView getStudyOverview(){
-        return new ModelAndView("study_overview","study_overview",new ArrayList<>());
+        return new ModelAndView("study_overview","moments",null);
     }
 }

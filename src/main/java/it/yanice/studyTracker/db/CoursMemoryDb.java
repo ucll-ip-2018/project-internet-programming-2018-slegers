@@ -2,8 +2,9 @@ package it.yanice.studyTracker.db;
 
 import it.yanice.studyTracker.domain.Cours;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class CoursMemoryDb implements Coursedb {
 
@@ -11,6 +12,8 @@ public class CoursMemoryDb implements Coursedb {
 
     public CoursMemoryDb(){
         courses = new HashMap<>();
+        insert(new Cours("CN 2",5,2));
+        insert(new Cours("CN 1",3,1));
     }
 
     @Override
@@ -34,7 +37,7 @@ public class CoursMemoryDb implements Coursedb {
     }
 
     @Override
-    public Collection<Cours> getCourses() {
-        return courses.values();
+    public List<Cours> getCourses() {
+        return new ArrayList<>(courses.values());
     }
 }

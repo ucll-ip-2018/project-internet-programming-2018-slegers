@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -16,6 +17,9 @@
                 <th> Les?</th>
                 <th> Verwijder</th>
             </tr>
+            <c:forEach var="moment" items="moments">
+
+            </c:forEach>
         </table>
 </main>
 </body>

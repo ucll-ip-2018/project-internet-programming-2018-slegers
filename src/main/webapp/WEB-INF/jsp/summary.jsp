@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -15,14 +17,15 @@
 <body>
 <main>
     <jsp:include page="header.jsp"/>
-    <div class="circle">
-        <div class="circleText">
-            IP
+
+    <c:forEach var="c" items="${c}">
+        <div class="circle">
+            <div class="circleText"> ${c[name]} </div>
+            <div class="circleNumb">
+                <span> ${c.name} </span>
+            </div>
         </div>
-        <div class="circleNumb">
-            <span> 2u </span>
-        </div>
-    </div>
+    </c:forEach>
 
 </main>
 </body>
