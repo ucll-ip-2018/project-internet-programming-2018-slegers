@@ -2,6 +2,7 @@ package it.yanice.studyTracker.domain;
 
 public class StudyMoment {
 
+    private int id;
     private Cours cours;
     private int hours;
     private int minutes;
@@ -11,7 +12,7 @@ public class StudyMoment {
 
     }
 
-    public StudyMoment(Cours cours, int hours,int minutes, String date){
+    public StudyMoment(int id, Cours cours, int hours,int minutes, String date){
         setCours(cours);
         setHours(hours);
         setMinutes(minutes);
@@ -72,5 +73,13 @@ public class StudyMoment {
             }
         }
         return false;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

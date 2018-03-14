@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class CoursMemoryDb implements Coursedb {
+public class CoursMemoryDb implements CourseDb {
 
     private HashMap<String,Cours> courses;
 

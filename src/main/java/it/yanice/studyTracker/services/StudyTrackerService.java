@@ -1,13 +1,12 @@
 package it.yanice.studyTracker.services;
-import it.yanice.studyTracker.db.Coursedb;
+import it.yanice.studyTracker.db.CourseDb;
 import it.yanice.studyTracker.db.DbFactory;
 import it.yanice.studyTracker.domain.Cours;
 
-import java.util.Collection;
 import java.util.List;
 
 public class StudyTrackerService {
-    private Coursedb coursedb;
+    private CourseDb coursedb;
 
     public StudyTrackerService(){
         coursedb = new DbFactory().getDB("CoursMemoryDb");

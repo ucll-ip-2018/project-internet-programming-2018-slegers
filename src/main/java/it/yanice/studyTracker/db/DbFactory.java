@@ -1,12 +1,12 @@
 package it.yanice.studyTracker.db;
 
 public class DbFactory {
-    public Coursedb getDB(String dbname) {
-        Coursedb database = null;
+    public Db getDB(String dbname) {
+        CourseDb database = null;
         try {
             Class dbclass = Class.forName("it.yanice.studyTracker.db." + dbname);
             Object dbObject = dbclass.newInstance();
-            database = (Coursedb) dbObject;
+            database = (CourseDb) dbObject;
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             try {
                 throw new DbException("The database you enter doesn't exist.");

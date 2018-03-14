@@ -17,18 +17,18 @@ public class StudyMomentTest {
         cn1 = new Cours("Computernetwerken 1",3,1);
         cn2 = new Cours("Computernetwerken 2",5,1);
 
-        studyMoment1 = new StudyMoment(cn1,1,30,"30/06/1995");
-        studyMoment2 = new StudyMoment(cn2,1,30,"30/06/1995");
+        studyMoment1 = new StudyMoment(1,cn1,1,30,"30/06/1995");
+        studyMoment2 = new StudyMoment(2,cn2,1,30,"30/06/1995");
         studyMoment1Copy = studyMoment1;
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void studyMoment_negative_hours_Test(){
-        StudyMoment t = new StudyMoment(cn1,-1,0,date);
+        StudyMoment t = new StudyMoment(1,cn1,-1,0,date);
     }
     @Test(expected = IllegalArgumentException.class)
     public void studyMoment_negative_minutes_Test(){
-        StudyMoment t = new StudyMoment(cn1,1,-10,date);
+        StudyMoment t = new StudyMoment(1,cn1,1,-10,date);
     }
 
     @Test
@@ -43,17 +43,17 @@ public class StudyMomentTest {
 
     @Test
     public void studyMoment_equals_false_diff_hours(){
-        assertFalse(studyMoment1.equals(new StudyMoment(cn1,2,30,date)));
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,2,30,date)));
     }
 
     @Test
     public void studyMoment_equals_false_diff_minutes(){
-        assertFalse(studyMoment1.equals(new StudyMoment(cn1,1,10,date)));
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,10,date)));
     }
 
     @Test
     public void studyMoment_equals_false_diff_date(){
-        assertFalse(studyMoment1.equals(new StudyMoment(cn1,1,30,"29/01/1910")));
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,30,"29/01/1910")));
     }
 
     @Test
@@ -68,7 +68,7 @@ public class StudyMomentTest {
 
     @Test
     public void studyMoment_set_To_many_minutes_test(){
-        StudyMoment s = new StudyMoment(cn1,1,120,date);
+        StudyMoment s = new StudyMoment(1,cn1,1,120,date);
         assertTrue(s.getMinutes() == 0);
         assertTrue(s.getHours() == 3);
     }
