@@ -63,4 +63,14 @@ public class StudyMoment {
         setHours(getHours() + hours);
         this.minutes = minutes % 60;
     }
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof StudyMoment){
+            StudyMoment s = (StudyMoment) o;
+            if(getCours().equals(s.getCours()) && getHours() == s.getHours() && getMinutes() == s.getMinutes() && getDate().equals(s.getDate())){
+                return true;
+            }
+        }
+        return false;
+    }
 }

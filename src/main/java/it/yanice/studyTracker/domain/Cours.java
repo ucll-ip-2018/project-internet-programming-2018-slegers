@@ -50,4 +50,16 @@ public class Cours {
     public int getSemester(){
         return semester;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof Cours){
+            Cours c = (Cours) o;
+            if(this.getName().equals(c.getName()) && this.getSemester() == c.getSemester() && this.getStudyPoints() == c.getStudyPoints()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

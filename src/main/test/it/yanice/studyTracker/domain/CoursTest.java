@@ -7,13 +7,14 @@ import static org.junit.Assert.*;
 
 public class CoursTest {
 
-    private Cours cn2;
+    private Cours cn2, cn2Copy;
     private Cours cn1;
 
     @Before
     public void init(){
         cn1 = new Cours("Computernetwerken 1",5,2);
         cn2 = new Cours("Computernetwerken 2",3,1);
+        cn2Copy = cn2;
     }
 
     @Test
@@ -44,4 +45,13 @@ public class CoursTest {
         cn1.setSemester(0);
     }
 
+    @Test
+    public void equals_true_test(){
+        assertTrue(cn2.equals(cn2Copy));
+    }
+
+    @Test
+    public void equals_false_test(){
+        assertFalse(cn1.equals(cn2));
+    }
 }
