@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: yanice
@@ -23,10 +24,9 @@
             <br>
             <br>
             <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <c:forEach var="c" items="${courses}">
+                    <option value="${c.name}">${c.name}</option>
+                </c:forEach>
             </select>
             <br>
             <input type="date" name="dag" value="dag">
