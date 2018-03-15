@@ -1,11 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <meta name="theme-color" content="#ffffff">    <title>Studietracker</title>
-</head>
+    <jsp:include page="Head.jsp"/>
 <body>
 <main>
     <jsp:include page="header.jsp"/>

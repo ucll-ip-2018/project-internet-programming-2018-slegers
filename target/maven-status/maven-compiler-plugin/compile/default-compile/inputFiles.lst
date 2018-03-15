@@ -1,9 +1,9 @@
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/StudyMomentDb.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/services/StudyTrackerService.java
-/Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/StudyOverviewPage.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/DbException.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/CourseDb.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/SummaryPage.java
+/Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/StudyController.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/config/DispatcherServletConfig.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/config/ApplicationConfig.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/CourseController.java
@@ -11,7 +11,5 @@
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/DbFactory.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/CoursMemoryDb.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/config/WebInitializer.java
-/Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/AddCoursPage.java
-/Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/web/controller/AddStudyPage.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/domain/Cours.java
 /Users/yanice/Documents/KUL/2017-2018/IP/src/main/java/it/yanice/studyTracker/db/StudyMomentMemoryDb.java

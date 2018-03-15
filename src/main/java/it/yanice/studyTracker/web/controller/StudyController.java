@@ -7,20 +7,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.ws.rs.GET;
-
 @Controller
-@RequestMapping("/study_add")
-public class AddStudyPage {
-
+@RequestMapping(value = "/Studymoment")
+public class StudyController {
     private StudyTrackerService service;
 
-    public AddStudyPage(@Autowired StudyTrackerService service){
+    public StudyController(@Autowired StudyTrackerService service){
         this.service = service;
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView getAddStudy(){
+    public ModelAndView getStudyOverview(){
+        return new ModelAndView("study_overview","moments",service.getStudymoments());
+    }
+
+    @RequestMapping(value = "/add",method = RequestMethod.GET)
+    public ModelAndView getAddStudymomentForm(){
         return new ModelAndView("study_add","courses",service.getCourses());
     }
+
+
 }

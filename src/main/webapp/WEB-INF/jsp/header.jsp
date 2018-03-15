@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="top">
-    <img src="img/logo2.png" class="logo"/>
+    <img src="${pageContext.request.contextPath}/img/logo2.png" class="logo"/>
     <div class="title"><h1>Home</h1> </div>
 </div>
 <div class="left">
@@ -15,10 +15,8 @@
         <ul>
             <li> <a href="index.htm" class="active"> Home </a> </li>
             <li> <a href="Courses.htm"> Vakken </a> </li>
-            <li> <a href="study_overview.htm"> Studiemomenten </a>  </li>
+            <li> <a href="Studymoment.htm"> Studiemomenten </a>  </li>
             <li> <a href="summary.htm"> Overzicht </a>  </li>
-            <li> <a href="study_add.htm"> Add Studiemoment </a> </li>
-            <li> <a href="course_add.htm"> Add vak </a>  </li>
         </ul>
     </nav>
 </div>

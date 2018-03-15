@@ -8,11 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>vakken</title>
-</head>
+    <jsp:include page="Head.jsp"/>
 <body>
 <main>
     <jsp:include page="header.jsp"/>
@@ -32,6 +28,7 @@
                 </tr>
             </c:forEach>
         </table>
+        <a class="submit" href="<c:url value="/Courses/add.htm"/>">New</a>
     </div>
 </main>
 </body>

@@ -24,4 +24,10 @@ public class CourseController {
         return new ModelAndView("courses","courses", service.getCourses());
     }
 
+
+    @RequestMapping(value= "/add", method = RequestMethod.GET)
+    public ModelAndView getAddCoursForm(){
+        return new ModelAndView("course_add","",null);
+    }
 }
+
