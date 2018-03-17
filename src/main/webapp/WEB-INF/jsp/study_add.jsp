@@ -8,11 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <link rel="stylesheet" type="/text/css" href="css/reset.css">
-    <link rel="stylesheet" type="/text/css" href="css/style.css">
-    <title>Add Studiemoment</title>
-</head>
+<jsp:include page="Head.jsp"/>
 <body>
 <main>
     <jsp:include page="header.jsp"/>

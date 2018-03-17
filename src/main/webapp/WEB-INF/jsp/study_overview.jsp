@@ -26,6 +26,7 @@
              </tr>
             </c:forEach>
         </table>
+        <br>
         <a class="submit" href="<c:url value="/Studymoment/add.htm"/>">New</a>
     </div>
 </main>
