@@ -1,8 +1,10 @@
 package it.yanice.studyTracker.web.controller;
 
+import it.yanice.studyTracker.domain.StudyMoment;
 import it.yanice.studyTracker.services.StudyTrackerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -26,5 +28,12 @@ public class StudyController {
         return new ModelAndView("study_add","courses",service.getCourses());
     }
 
-
+    @RequestMapping(method = RequestMethod.POST)
+    public String save(StudyMoment m, BindingResult r){
+        if(r.hasErrors()){
+            return "studymomentForm";
+        }
+        service.insertStudymoment(m);
+        return "redirect:/Studymoment.htm";
+    }
 }

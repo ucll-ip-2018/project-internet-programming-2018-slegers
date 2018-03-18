@@ -12,10 +12,10 @@
 <body>
 <main>
     <jsp:include page="header.jsp"/>
+    <h1>Studiemoment</h1>
     <div class="main">
-        <form class="form-add-vak" method="post">
-            <h1>Studiemoment</h1>
-
+        <form class="form-add-vak" method="post" action="<c:url value="/Studymoment.htm"/>">
+            <input type="hidden" id="studymomentForm" value="${studymoment.id}">
             <input type="time" required name="tijd">
             <br>
             <br>
@@ -25,9 +25,9 @@
                 </c:forEach>
             </select>
             <br>
-            <input type="date" name="dag" value="dag">
+            <input type="date" name="date" value="date">
             <br>
-            <input type="submit" value="Submit">
+            <input id="save" type="submit" value="Submit">
 
         </form>
     </div>

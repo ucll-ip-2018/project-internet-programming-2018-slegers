@@ -2,6 +2,9 @@ package it.yanice.studyTracker.domain;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
 
 import static org.junit.Assert.*;
 
@@ -11,14 +14,21 @@ public class StudyMomentTest {
     private StudyMoment studyMoment2;
     private Cours cn1, cn1copy;
     private Cours cn2;
-    private String date = "30/06/1995";
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate date;
+
+    public StudyMomentTest() {
+    }
+
     @Before
     public void setUp()  {
+        date = LocalDate.of(1995,06,30);
+
         cn1 = new Cours("Computernetwerken 1",3,1);
         cn2 = new Cours("Computernetwerken 2",5,1);
 
-        studyMoment1 = new StudyMoment(1,cn1,1,30,"30/06/1995");
-        studyMoment2 = new StudyMoment(2,cn2,1,30,"30/06/1995");
+        studyMoment1 = new StudyMoment(1,cn1,1,30,date);
+        studyMoment2 = new StudyMoment(2,cn2,1,30,date);
         studyMoment1Copy = studyMoment1;
     }
 
@@ -53,7 +63,8 @@ public class StudyMomentTest {
 
     @Test
     public void studyMoment_equals_false_diff_date(){
-        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,30,"29/01/1910")));
+        LocalDate date1 = LocalDate.of(1991,10,3);
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,30,date1)));
     }
 
     @Test
@@ -82,7 +93,7 @@ public class StudyMomentTest {
     @Test (expected = IllegalArgumentException.class)
     public void setStudyMoment_date_empty() {
         StudyMoment s = new StudyMoment();
-        s.setDate("");
+        s.setDate(null);
     }
 
 

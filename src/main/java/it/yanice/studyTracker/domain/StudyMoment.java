@@ -1,18 +1,23 @@
 package it.yanice.studyTracker.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDate;
+
 public class StudyMoment {
 
     private int id;
     private Cours cours;
     private int hours;
     private int minutes;
-    private String date;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate date;
 
     public StudyMoment(){
 
     }
 
-    public StudyMoment(int id, Cours cours, int hours,int minutes, String date){
+    public StudyMoment(int id, Cours cours, int hours,int minutes, LocalDate date){
         setId(id);
         setCours(cours);
         setHours(hours);
@@ -46,12 +51,12 @@ public class StudyMoment {
         return minutes;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        if(date.trim().isEmpty()){
+    public void setDate(LocalDate date) {
+        if(date == null){
             throw new IllegalArgumentException("The date of a studymoment can't be empty.");
         }
         this.date = date;
