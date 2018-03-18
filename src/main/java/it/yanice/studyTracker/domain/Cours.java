@@ -1,6 +1,5 @@
 package it.yanice.studyTracker.domain;
 
-import org.springframework.context.annotation.Bean;
 
 
 public class Cours {
