@@ -12,8 +12,8 @@ public class CoursMemoryDb implements CourseDb {
 
     public CoursMemoryDb(){
         courses = new HashMap<>();
-        insert(new Cours("CN 2",5,2));
-        insert(new Cours("CN 1",3,1));
+        insert(new Cours("ComputerNetwerken",5,2));
+        insert(new Cours("Testing",3,1));
     }
 
     @Override

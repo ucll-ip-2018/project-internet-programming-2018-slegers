@@ -5,6 +5,7 @@ import it.yanice.studyTracker.services.StudyTrackerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,7 +22,7 @@ public class CourseController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView getCourseOverview(){
-        return new ModelAndView("courses","courses", service.getCourses());
+        return new ModelAndView("cours_overview","courses", service.getCourses());
     }
 
 
@@ -38,6 +39,10 @@ public class CourseController {
             service.insertCours(c);
             return "redirect:/Courses.htm";
         }
+    }
+    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    public ModelAndView getEditForm(@PathVariable String name){
+        return new ModelAndView("cours_add","cours",service.getCours(name));
     }
 }
 

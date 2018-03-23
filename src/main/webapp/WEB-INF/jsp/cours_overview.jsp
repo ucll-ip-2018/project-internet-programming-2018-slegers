@@ -18,13 +18,15 @@
             <tr class="header">
                 <th> Vak </th>
                 <th> Studiepunten</th>
+                <th> Edit?</th>
                 <th> Verwijder</th>
             </tr>
             <c:forEach var="cours" items="${courses}">
                 <tr>
                     <td>${cours.name}</td>
                     <td>${cours.studyPoints}</td>
-                    <td> <a onclick="" class="delete_vak"> &#9447; delete</a> </td>
+                    <td><a href="Courses/${cours.name}.htm">Edit</a> </td>
+                    <td> <a class="delete_vak"> &#9447; delete</a> </td>
                 </tr>
             </c:forEach>
         </table>
