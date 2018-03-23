@@ -27,8 +27,8 @@ public class StudyTrackerService {
         coursedb.edit(cours);
     }
 
-    public Cours getCours(String coursname){
-        return coursedb.getCours(coursname);
+    public Cours getCours(int id){
+        return coursedb.getCours(id);
     }
 
     public List<Cours> getCourses(){

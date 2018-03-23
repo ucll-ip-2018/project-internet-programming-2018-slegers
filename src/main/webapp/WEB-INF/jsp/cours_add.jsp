@@ -10,8 +10,10 @@
 
     <div class="main">
         <h1>Vak</h1>
-
-        <form:form cssClass="form-add-vak" method="post" action="${pageContext.request.contextPath}/Courses.htm" modelAttribute="cours">
+        <c:choose>
+            <c:when test="${cours != null}">
+            <form:form cssClass="form-add-vak" method="post" action="${pageContext.request.contextPath}/Courses.htm" modelAttribute="cours">
+            <form:hidden path="id"/>
             <p class="form-group">
                 <label for="name">Name (required):</label>
                 <form:input path="name" id="name"/> <br>
@@ -28,9 +30,23 @@
                 <form:errors path="semester" cssClass="error"/>
             </p>
             <p>
-                <input id="save" type="submit" value="Submit">
+                <input type="submit" value="Submit">
             </p>
         </form:form>
+            </c:when>
+            <c:otherwise>
+                <form class="form-add-vak" method="post" action="<c:url value="/Courses.htm"/>">
+                    <input type="text" placeholder="Naam" name="name">
+                    <input type="number" placeholder="Studiepunten" required step="1" min="1" name="studyPoints" value="${cours.studyPoints}">
+                    <br>
+                    <br>
+                    <input type="number" placeholder="Semester" required step="1" min="1" max="2" name="semester" value="${cours.semester}">
+                    <br>
+                    <br>
+                    <input id="save" type="submit" value="Submit">
+                </form>
+            </c:otherwise>
+        </c:choose>
     </div>
 </main>
 </body>

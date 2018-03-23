@@ -12,8 +12,8 @@ public class CoursTest {
 
     @Before
     public void init(){
-        cn1 = new Cours("Computernetwerken 1",5,2);
-        cn2 = new Cours("Computernetwerken 2",3,1);
+        cn1 = new Cours(0,"netwerken",5,2);
+        cn2 = new Cours(1,"testing",3,1);
         cn2Copy = cn2;
     }
 

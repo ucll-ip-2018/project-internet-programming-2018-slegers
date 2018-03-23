@@ -3,6 +3,7 @@ package it.yanice.studyTracker.domain;
 
 
 public class Cours {
+    private int id;
     private String name;
     private int studyPoints;
     private int semester;
@@ -11,7 +12,8 @@ public class Cours {
 
     }
 
-    public Cours(String name, int studyPoints, int semester){
+    public Cours(int id, String name, int studyPoints, int semester){
+        setId(id);
         setName(name);
         setStudyPoints(studyPoints);
         setSemester(semester);
@@ -61,4 +63,10 @@ public class Cours {
         return false;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId(){
+        return id;
+    }
 }

@@ -16,7 +16,7 @@ public class StudyMomentMemoryDb implements StudyMomentDb {
     public StudyMomentMemoryDb(){
         studyMomentMap = new HashMap<>();
         LocalDate date = LocalDate.of(1995,06,30);
-        Cours cn1 = new Cours("Computernetwerken 2",5,2);
+        Cours cn1 = new Cours(0,"Computernetwerken 2",5,2);
         LocalTime time = LocalTime.of(2,30);
         insert(new StudyMoment(1,cn1,time,date));
         insert(new StudyMoment(2,cn1,time,date));

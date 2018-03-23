@@ -9,6 +9,6 @@ public interface CourseDb {
      void insert(Cours cours);
      void delete(Cours cours);
      void edit(Cours cours);
-     Cours getCours(String name);
+     Cours getCours(int name);
      List<Cours> getCourses();
 }

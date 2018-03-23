@@ -25,8 +25,8 @@ public class StudyMomentTest {
     public void setUp()  {
         date = LocalDate.of(1995,06,30);
 
-        cn1 = new Cours("Computernetwerken 1",3,1);
-        cn2 = new Cours("Computernetwerken 2",5,1);
+        cn1 = new Cours(0,"netwerken",3,1);
+        cn2 = new Cours(1,"testing",5,1);
         time = LocalTime.of(2,30);
         studyMoment1 = new StudyMoment(1,cn1,time,date);
         studyMoment2 = new StudyMoment(2,cn2,time,date);
