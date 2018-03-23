@@ -4,7 +4,6 @@
 }
 body,html,main{
     background-color:   #255C99;
-    height: 100%;
 }
 
 .top  >img, .top  > .title{
@@ -22,9 +21,6 @@ body,html,main{
 }
 .title > h1{
     font-size: 72px;
-}
-main{
-    height: 100%;
 }
 .left{
     top: 17%;
@@ -145,7 +141,6 @@ form input[placeholder]{
 form {
     display: inline-block;
     margin-left:34%;
-    margin-top:5%;
     color: #fff;
 
 }
@@ -183,7 +178,6 @@ form input{
 h1{
     color: #fff;
     font-size: 40px;
-    margin-bottom: 4%;
 }
 form input[type=submit] {
    background: #00cc00;
@@ -226,8 +220,6 @@ p {
   }
   main{
     overflow:hidden;
-    height: 100%;
-        
   }
 .pagination{
       margin-top: 4%;

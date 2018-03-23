@@ -18,7 +18,7 @@ public class Cours {
     }
 
     public void setName(String name) {
-        if(name.trim().isEmpty()){
+        if(name == null || name.trim().isEmpty()){
             throw new IllegalArgumentException("The name of a cours can't be empty.");
         }
         this.name = name;

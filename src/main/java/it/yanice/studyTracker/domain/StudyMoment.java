@@ -11,6 +11,7 @@ public class StudyMoment {
     private Cours cours;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate date;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     private LocalTime time;
 
     public StudyMoment(){

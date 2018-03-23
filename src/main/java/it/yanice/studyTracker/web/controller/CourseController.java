@@ -34,7 +34,7 @@ public class CourseController {
     @RequestMapping(method = RequestMethod.POST)
     public String save(Cours c, BindingResult result){
         if(result.hasErrors()){
-            return "coursForm";
+            return "cours_add";
         }else{
             service.insertCours(c);
             return "redirect:/Courses.htm";
