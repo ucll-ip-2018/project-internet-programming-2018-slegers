@@ -30,14 +30,14 @@ public class StudyTrackerServiceTest {
 
     @Test
     public void testDeleteCours() throws Exception {
-        studyTrackerService.deleteCours(CN2);
+        studyTrackerService.deleteCours(CN2.getId());
         assertTrue(studyTrackerService.getCourses().size() ==0);
     }
     @Test
     public void deleteCoursIfAlreadyInThere(){
        studyTrackerService.insertCours(CN2);
         assertTrue(studyTrackerService.getCourses().size()==1);
-        studyTrackerService.deleteCours(CN2);
+        studyTrackerService.deleteCours(CN2.getId());
         assertTrue(studyTrackerService.getCourses().size() == 0);
     }
 

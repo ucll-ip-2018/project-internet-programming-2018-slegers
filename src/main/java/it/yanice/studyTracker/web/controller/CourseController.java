@@ -36,18 +36,21 @@ public class CourseController {
         if(result.hasErrors()){
             return "cours_add";
         }else{
-            if(c.getId() == 0){
-                service.insertCours(c);
-            }else{
-                service.updateCours(c);
-            }
+            service.insertCours(c);
+        }
             return "redirect:/Courses.htm";
         }
-    }
+
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ModelAndView getEditForm(@PathVariable int id){
         return new ModelAndView("cours_add","cours",service.getCours(id));
+    }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteCours(@PathVariable int id){
+        service.deleteCours(id);
+        return getCourseOverview();
     }
 }
 
