@@ -8,32 +8,33 @@ import java.util.List;
 
 public class CoursMemoryDb implements CourseDb {
 
-    private HashMap<String,Cours> courses;
+    private HashMap<Integer,Cours> courses;
 
     public CoursMemoryDb(){
         courses = new HashMap<>();
-        insert(new Cours("ComputerNetwerken",5,2));
-        insert(new Cours("Testing",3,1));
+        insert(new Cours(0,"ComputerNetwerken",5,2));
+        insert(new Cours(1,"Testing",3,1));
     }
 
     @Override
     public void insert(Cours cours) {
-        courses.put(cours.getName(),cours);
+        cours.setId(courses.size()+1);
+        courses.put(courses.size()+1,cours);
     }
 
     @Override
     public void delete(Cours cours) {
-        courses.remove(cours.getName());
+        courses.remove(cours.getId());
     }
 
     @Override
     public void edit(Cours cours) {
-        courses.put(cours.getName(),cours);
+        courses.put(cours.getId(),cours);
     }
 
     @Override
-    public Cours getCours(String name) {
-        return courses.get(name);
+    public Cours getCours(int id) {
+        return courses.get(id);
     }
 
     @Override

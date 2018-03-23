@@ -15,8 +15,8 @@ public class StudyTrackerServiceTest {
 
     @Before
     public void init(){
-        CN2 = new Cours("Computernetwerken 2",5,2);
-        CN1 = new Cours("Computernetwerken 1",3,1);
+        CN2 = new Cours(0,"netwerken",5,2);
+        CN1 = new Cours(1,"testing",3,1);
         studyTrackerService = new StudyTrackerService();
     }
 

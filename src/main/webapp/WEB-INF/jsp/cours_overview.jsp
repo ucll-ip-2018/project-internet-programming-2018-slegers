@@ -16,6 +16,7 @@
     <div class="main">
         <table>
             <tr class="header">
+                <th> id</th>
                 <th> Vak </th>
                 <th> Studiepunten</th>
                 <th> Edit?</th>
@@ -23,9 +24,10 @@
             </tr>
             <c:forEach var="cours" items="${courses}">
                 <tr>
+                    <td>${cours.id}</td>
                     <td>${cours.name}</td>
                     <td>${cours.studyPoints}</td>
-                    <td><a href="Courses/${cours.name}.htm">Edit</a> </td>
+                    <td><a href="Courses/${cours.id}.htm">Edit</a> </td>
                     <td> <a class="delete_vak"> &#9447; delete</a> </td>
                 </tr>
             </c:forEach>

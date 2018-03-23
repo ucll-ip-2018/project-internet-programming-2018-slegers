@@ -28,7 +28,7 @@ public class CourseController {
 
     @RequestMapping(value= "/add", method = RequestMethod.GET)
     public ModelAndView getAddCoursForm(){
-        return new ModelAndView("cours_add","",null);
+        return new ModelAndView("cours_add","cours",null);
     }
 
     @RequestMapping(method = RequestMethod.POST)
@@ -36,13 +36,18 @@ public class CourseController {
         if(result.hasErrors()){
             return "cours_add";
         }else{
-            service.insertCours(c);
+            if(c.getId() == 0){
+                service.insertCours(c);
+            }else{
+                service.updateCours(c);
+            }
             return "redirect:/Courses.htm";
         }
     }
-    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public ModelAndView getEditForm(@PathVariable String name){
-        return new ModelAndView("cours_add","cours",service.getCours(name));
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ModelAndView getEditForm(@PathVariable int id){
+        return new ModelAndView("cours_add","cours",service.getCours(id));
     }
 }
 
