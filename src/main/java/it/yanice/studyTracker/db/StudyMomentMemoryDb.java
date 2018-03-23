@@ -4,6 +4,7 @@ import it.yanice.studyTracker.domain.Cours;
 import it.yanice.studyTracker.domain.StudyMoment;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,9 +17,10 @@ public class StudyMomentMemoryDb implements StudyMomentDb {
         studyMomentMap = new HashMap<>();
         LocalDate date = LocalDate.of(1995,06,30);
         Cours cn1 = new Cours("Computernetwerken 2",5,2);
-        insert(new StudyMoment(1,cn1,2,0,date));
-        insert(new StudyMoment(2,cn1,3,0,date));
-        insert(new StudyMoment(2,cn1,4,0,date));
+        LocalTime time = LocalTime.of(2,30);
+        insert(new StudyMoment(1,cn1,time,date));
+        insert(new StudyMoment(2,cn1,time,date));
+        insert(new StudyMoment(2,cn1,time,date));
 
 
     }

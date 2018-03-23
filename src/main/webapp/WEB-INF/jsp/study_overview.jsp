@@ -20,7 +20,7 @@
                 <td>${moment.date}</td>
                 <td>${moment.cours.name
                 }</td>
-                <td>${moment.hours}u${moment.minutes}</td>
+                <td>${moment.time}</td>
                 <td>Ja</td>
                 <td><a href="">delete</a></td>
              </tr>

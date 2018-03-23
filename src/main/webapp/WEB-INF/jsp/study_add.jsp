@@ -16,12 +16,11 @@
     <div class="main">
         <form class="form-add-vak" method="post" action="<c:url value="/Studymoment.htm"/>">
             <input type="hidden" id="studymomentForm" value="${studymoment.id}">
-            <input type="time" required name="tijd">
+            <input type="time" required name="time">
             <br>
-            <br>
-            <select>
+            <select name="cours">
                 <c:forEach var="c" items="${courses}">
-                    <option value="${c.name}">${c.name}</option>
+                    <option value="${c}">${c.name}</option>
                 </c:forEach>
             </select>
             <br>

@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +17,7 @@ public class StudyMomentTest {
     private Cours cn2;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate date;
-
+    private LocalTime time;
     public StudyMomentTest() {
     }
 
@@ -26,19 +27,10 @@ public class StudyMomentTest {
 
         cn1 = new Cours("Computernetwerken 1",3,1);
         cn2 = new Cours("Computernetwerken 2",5,1);
-
-        studyMoment1 = new StudyMoment(1,cn1,1,30,date);
-        studyMoment2 = new StudyMoment(2,cn2,1,30,date);
+        time = LocalTime.of(2,30);
+        studyMoment1 = new StudyMoment(1,cn1,time,date);
+        studyMoment2 = new StudyMoment(2,cn2,time,date);
         studyMoment1Copy = studyMoment1;
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void studyMoment_negative_hours_Test(){
-        StudyMoment t = new StudyMoment(1,cn1,-1,0,date);
-    }
-    @Test(expected = IllegalArgumentException.class)
-    public void studyMoment_negative_minutes_Test(){
-        StudyMoment t = new StudyMoment(1,cn1,1,-10,date);
     }
 
     @Test
@@ -53,36 +45,24 @@ public class StudyMomentTest {
 
     @Test
     public void studyMoment_equals_false_diff_hours(){
-        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,2,30,date)));
+        LocalTime time2 = LocalTime.of(3,30);
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,time2,date)));
     }
 
     @Test
     public void studyMoment_equals_false_diff_minutes(){
-        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,10,date)));
+        LocalTime time2 = LocalTime.of(3,30);
+
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,time2,date)));
     }
 
     @Test
     public void studyMoment_equals_false_diff_date(){
         LocalDate date1 = LocalDate.of(1991,10,3);
-        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,1,30,date1)));
+        assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,time,date1)));
     }
 
-    @Test
-    public void studyMoment_setHours_test(){
-        assertTrue(studyMoment1.getHours() == 1);
-    }
 
-    @Test
-    public void studyMoment_setMinutes_test(){
-        assertTrue(studyMoment1.getMinutes() == 30);
-    }
-
-    @Test
-    public void studyMoment_set_To_many_minutes_test(){
-        StudyMoment s = new StudyMoment(1,cn1,1,120,date);
-        assertTrue(s.getMinutes() == 0);
-        assertTrue(s.getHours() == 3);
-    }
 
     @Test (expected = IllegalArgumentException.class)
     public void setStudyMoment_cours_null(){

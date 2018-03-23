@@ -31,7 +31,7 @@ public class StudyController {
     @RequestMapping(method = RequestMethod.POST)
     public String save(StudyMoment m, BindingResult r){
         if(r.hasErrors()){
-            return "studymomentForm";
+            return "study_add";
         }
         service.insertStudymoment(m);
         return "redirect:/Studymoment.htm";

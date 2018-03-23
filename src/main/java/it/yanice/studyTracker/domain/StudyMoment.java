@@ -3,25 +3,24 @@ package it.yanice.studyTracker.domain;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class StudyMoment {
 
     private int id;
     private Cours cours;
-    private int hours;
-    private int minutes;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate date;
+    private LocalTime time;
 
     public StudyMoment(){
 
     }
 
-    public StudyMoment(int id, Cours cours, int hours,int minutes, LocalDate date){
+    public StudyMoment(int id, Cours cours, LocalTime time, LocalDate date){
         setId(id);
         setCours(cours);
-        setHours(hours);
-        setMinutes(minutes);
+        setTime(time);
         setDate(date);
     }
 
@@ -36,20 +35,6 @@ public class StudyMoment {
         this.cours = cours;
     }
 
-    public int getHours() {
-        return hours;
-    }
-
-    public void setHours(int hours) {
-        if(hours < 0){
-            throw new IllegalArgumentException("The hours of a studymoment must be positive");
-        }
-        this.hours = hours;
-    }
-
-    public int getMinutes() {
-        return minutes;
-    }
 
     public LocalDate getDate() {
         return date;
@@ -62,19 +47,11 @@ public class StudyMoment {
         this.date = date;
     }
 
-    public void setMinutes(int minutes) {
-        if(minutes < 0){
-            throw new IllegalArgumentException("The minitues of a studymoment must be positive.");
-        }
-        int hours = minutes /60;
-        setHours(getHours() + hours);
-        this.minutes = minutes % 60;
-    }
     @Override
     public boolean equals(Object o){
         if(o instanceof StudyMoment){
             StudyMoment s = (StudyMoment) o;
-            if(getCours().equals(s.getCours()) && getHours() == s.getHours() && getMinutes() == s.getMinutes() && getDate().equals(s.getDate())){
+            if(getCours().equals(s.getCours()) && getTime().equals(s.getTime()) && getDate().equals(s.getDate())){
                 return true;
             }
         }
@@ -87,5 +64,16 @@ public class StudyMoment {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setTime(LocalTime time) {
+        if(time == null){
+            throw new IllegalArgumentException("The time of a studymoment can't be null.");
+        }
+        this.time = time;
+    }
+
+    public LocalTime getTime() {
+        return time;
     }
 }
