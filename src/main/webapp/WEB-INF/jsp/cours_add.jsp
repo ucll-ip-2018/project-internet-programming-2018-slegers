@@ -37,10 +37,10 @@
             <c:otherwise>
                 <form class="form-add-vak" method="post" action="<c:url value="/Courses.htm"/>">
                     <input type="text" placeholder="Naam" name="name">
-                    <input type="number" placeholder="Studiepunten" required step="1" min="1" name="studyPoints" value="${cours.studyPoints}">
+                    <input type="number" placeholder="Studiepunten" step="1" name="studyPoints" value="${cours.studyPoints}">
                     <br>
                     <br>
-                    <input type="number" placeholder="Semester" required step="1" min="1" max="2" name="semester" value="${cours.semester}">
+                    <input type="number" placeholder="Semester" step="1" max="2" name="semester" value="${cours.semester}">
                     <br>
                     <br>
                     <input id="save" type="submit" value="Submit">
