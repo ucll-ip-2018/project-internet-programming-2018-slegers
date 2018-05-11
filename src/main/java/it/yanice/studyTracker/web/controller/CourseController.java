@@ -31,16 +31,25 @@ public class CourseController {
         return new ModelAndView("cours_add","cours",null);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String save(Cours c, BindingResult result){
+    @RequestMapping(value= "/update", method = RequestMethod.POST)
+    public String update(Cours c, BindingResult result){
+        if(result.hasErrors()){
+            return "cours_add";
+        }else{
+            service.updateCours(c);
+        }
+        return "redirect:/Courses.htm";
+    }
+
+    @RequestMapping(value="/add",method = RequestMethod.POST)
+    public String savee(Cours c, BindingResult result){
         if(result.hasErrors()){
             return "cours_add";
         }else{
             service.insertCours(c);
         }
             return "redirect:/Courses.htm";
-        }
-
+    }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ModelAndView getEditForm(@PathVariable int id){

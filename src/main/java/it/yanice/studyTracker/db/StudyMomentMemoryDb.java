@@ -21,8 +21,6 @@ public class StudyMomentMemoryDb implements StudyMomentDb {
         insert(new StudyMoment(1,cn1,time,date));
         insert(new StudyMoment(2,cn1,time,date));
         insert(new StudyMoment(2,cn1,time,date));
-
-
     }
 
     @Override

@@ -19,6 +19,7 @@ public class StudyTrackerService {
     public void insertCours(Cours cours){
         coursedb.insert(cours);
     }
+
     public void deleteCours(int cours){
         coursedb.delete(cours);
     }
@@ -38,6 +39,7 @@ public class StudyTrackerService {
     public List<StudyMoment> getStudymoments() {
         return studyMomentDb.getStudyMoments();
     }
+
     public StudyMoment getStudyMoment(int studymomentId){
         return  studyMomentDb.getStudyMoment(studymomentId);
     }

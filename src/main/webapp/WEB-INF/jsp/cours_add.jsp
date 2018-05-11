@@ -12,7 +12,7 @@
         <h1>Vak</h1>
         <c:choose>
             <c:when test="${cours != null}">
-            <form:form cssClass="form-add-vak" method="post" action="${pageContext.request.contextPath}/Courses.htm" modelAttribute="cours">
+            <form:form cssClass="form-add-vak" method="post" action="/Courses/update.htm" modelAttribute="cours">
             <form:hidden path="id"/>
             <p class="form-group">
                 <label for="name">Name (required):</label>
@@ -35,7 +35,7 @@
         </form:form>
             </c:when>
             <c:otherwise>
-                <form class="form-add-vak" method="post" action="<c:url value="/Courses.htm"/>">
+                    <form class="form-add-vak" method="post" action="<c:url value='${"/Courses/add.htm"}'/>">
                     <input type="text" placeholder="Naam" name="name">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <input type="number" placeholder="Studiepunten" step="1" name="studyPoints" value="${cours.studyPoints}">
