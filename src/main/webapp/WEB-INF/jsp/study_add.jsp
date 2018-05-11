@@ -15,6 +15,7 @@
     <h1>Studiemoment</h1>
     <div class="main">
         <form class="form-add-vak" method="post" action="<c:url value="/Studymoment.htm"/>">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <input type="hidden" id="studymomentForm" value="${studymoment.id}">
             <input type="time" required name="time">
             <br>

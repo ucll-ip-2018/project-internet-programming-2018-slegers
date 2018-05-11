@@ -37,6 +37,7 @@
             <c:otherwise>
                 <form class="form-add-vak" method="post" action="<c:url value="/Courses.htm"/>">
                     <input type="text" placeholder="Naam" name="name">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <input type="number" placeholder="Studiepunten" step="1" name="studyPoints" value="${cours.studyPoints}">
                     <br>
                     <br>

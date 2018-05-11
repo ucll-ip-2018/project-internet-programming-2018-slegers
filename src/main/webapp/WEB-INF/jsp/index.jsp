@@ -1,4 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <jsp:include page="Head.jsp"/>
@@ -16,6 +18,11 @@
         <p> Het aantal uur dat u de voorbije zeven dagen naar de les bent geweest is:</p>
         <p> U bent deze week dus in totaal X met uw studies bezig geweest.</p>
         <p> U studeerde de vorige week op deze dag X uur.</p>
+
+        <form  method="POST" action="<c:url value="/logout" />">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <button>logout</button>
+        </form>
     </div>
 </main>
 </body>

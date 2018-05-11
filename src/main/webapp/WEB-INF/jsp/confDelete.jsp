@@ -10,12 +10,13 @@
 <html>
 <jsp:include page="Head.jsp"/>
 <body>
-<main>
+<main>w
     <jsp:include page="header.jsp"/>
     <h1>Studiemoment ~ Delete</h1>
     Are you sure to delete this cours?
     <div class="main">
         <form class="form-add-vak" method="post" action="<c:url value="/Studymoment.htm"/>">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <input id="save" type="submit" value="yes">
         </form>
     </div>
