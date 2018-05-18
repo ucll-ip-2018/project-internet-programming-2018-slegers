@@ -19,7 +19,7 @@
         <p> U bent deze week dus in totaal X met uw studies bezig geweest.</p>
         <p> U studeerde de vorige week op deze dag X uur.</p>
 
-        <form  method="POST" action="<c:url value="/logout" />">
+        <form  method="POST" action="<c:url value="${pageContext.request.contextPath}/logout" />">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <button>logout</button>
         </form>

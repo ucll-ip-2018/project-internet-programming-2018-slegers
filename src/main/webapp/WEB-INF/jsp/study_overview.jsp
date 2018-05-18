@@ -27,7 +27,7 @@
             </c:forEach>
         </table>
         <br>
-        <a class="submit" href="<c:url value="/Studymoment/add.htm"/>">New</a>
+        <a class="submit" href="<c:url value="${pageContext.request.contextPath}/Studymoment/add.htm"/>">New</a>
     </div>
 </main>
 </body>
