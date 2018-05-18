@@ -27,8 +27,8 @@
                     <td>${cours.id}</td>
                     <td>${cours.name}</td>
                     <td>${cours.studyPoints}</td>
-                    <td><a href="Courses/${cours.id}.htm">Edit</a> </td>
-                    <td><a href="Courses/delete/${cours.id}.htm"/> &#9447; delete</a> </td>
+                    <td><a href="${pageContext.request.contextPath}/Courses/${cours.id}.htm">Edit</a> </td>
+                    <td><a href="${pageContext.request.contextPath}/Courses/delete/${cours.id}.htm"/> &#9447; delete</a> </td>
                 </tr>
             </c:forEach>
         </table>
