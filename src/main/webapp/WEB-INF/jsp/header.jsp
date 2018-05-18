@@ -13,9 +13,9 @@
 <div class="left">
     <nav class="menu">
         <ul>
-            <li> <a href="/index.htm"> Home </a> </li>
-            <li> <a href="/Courses.htm"> Vakken </a> </li>
-            <li> <a href="/Studymoment.htm"> Studiemomenten </a>  </li>
+            <li> <a href="index.htm"> Home </a> </li>
+            <li> <a href="Courses.htm"> Vakken </a> </li>
+            <li> <a href="Studymoment.htm"> Studiemomenten </a>  </li>
         </ul>
     </nav>
 </div>
