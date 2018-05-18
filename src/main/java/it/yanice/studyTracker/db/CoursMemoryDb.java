@@ -18,7 +18,7 @@ public class CoursMemoryDb implements CourseDb {
 
     @Override
     public void insert(Cours cours) {
-        if(cours.getId() ==0 ){
+        if(cours.getId() == 0 ){
             cours.setId(courses.size()+1);
             courses.put(courses.size()+1,cours);
         }else{

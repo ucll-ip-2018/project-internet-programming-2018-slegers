@@ -13,9 +13,9 @@ public class StudyTrackerService {
     private StudyMomentDb studyMomentDb;
 
     public StudyTrackerService(){
-        coursedb = new CoursMemoryDb();
+        coursedb = new DbFactory().getDB("CoursMemoryDb");
        // coursedb = new DbFactory().getDB("CourseRelationalDb");
-        //studyMomentDb = new DbFactory().getStudymomentDb("StudyMomentMemoryDb");
+        studyMomentDb = new DbFactory().getStudymomentDb("StudyMomentMemoryDb");
     }
 
     public void insertCours(Cours cours){
