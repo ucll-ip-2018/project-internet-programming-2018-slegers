@@ -8,7 +8,7 @@ import java.time.LocalTime;
 public class StudyMoment {
 
     private int id;
-    private Cours cours;
+   // private Cours cours;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate date;
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
@@ -20,12 +20,12 @@ public class StudyMoment {
 
     public StudyMoment(int id, Cours cours, LocalTime time, LocalDate date){
         setId(id);
-        setCours(cours);
+        //setCours(cours);
         setTime(time);
         setDate(date);
     }
 
-    public Cours getCours() {
+    /*public Cours getCours() {
         return cours;
     }
 
@@ -35,7 +35,7 @@ public class StudyMoment {
         }
         this.cours = cours;
     }
-
+    */
 
     public LocalDate getDate() {
         return date;
@@ -47,7 +47,7 @@ public class StudyMoment {
         }
         this.date = date;
     }
-
+/*
     @Override
     public boolean equals(Object o){
         if(o instanceof StudyMoment){
@@ -58,7 +58,7 @@ public class StudyMoment {
         }
         return false;
     }
-
+*/
     public int getId() {
         return id;
     }

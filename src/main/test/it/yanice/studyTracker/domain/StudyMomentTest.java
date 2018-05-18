@@ -62,13 +62,14 @@ public class StudyMomentTest {
         assertFalse(studyMoment1.equals(new StudyMoment(1,cn1,time,date1)));
     }
 
-
+/*
 
     @Test (expected = IllegalArgumentException.class)
     public void setStudyMoment_cours_null(){
         StudyMoment s = new StudyMoment();
         s.setCours(null);
     }
+    */
 
     @Test (expected = IllegalArgumentException.class)
     public void setStudyMoment_date_empty() {
