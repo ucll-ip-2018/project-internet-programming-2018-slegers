@@ -16,11 +16,15 @@ public class CourseRelationalDb implements CourseDb {
 
     public CourseRelationalDb(){
         try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
             DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
             e.printStackTrace();
         }
         entityManagerFactory = Persistence.createEntityManagerFactory("ISTUDY");
