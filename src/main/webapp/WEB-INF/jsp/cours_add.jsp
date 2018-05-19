@@ -11,8 +11,8 @@
     <div class="main">
         <h1>Vak</h1>
         <c:choose>
-            <c:when test="${cours != null}">qwerty
-            <form:form cssClass="form-add-vak" method="post" action="/studyTracker/Courses/update.htm"> modelAttribute="cours">
+            <c:when test="${cours != null}">
+            <form:form cssClass="form-add-vak" method="post" action="/Courses/update.htm" modelAttribute="cours">
             <form:hidden path="id"/>
             <p class="form-group">
                 <label for="name">Name (required):</label>
