@@ -13,8 +13,8 @@ public class StudyTrackerService {
     private StudyMomentDb studyMomentDb;
 
     public StudyTrackerService(){
-        //coursedb = new DbFactory().getDB("CoursMemoryDb");
-        coursedb = new DbFactory().getDB("CourseRelationalDb");
+        coursedb = new DbFactory().getDB("CoursMemoryDb");
+        //coursedb = new DbFactory().getDB("CourseRelationalDb");
         studyMomentDb = new DbFactory().getStudymomentDb("StudyMomentMemoryDb");
     }
 
