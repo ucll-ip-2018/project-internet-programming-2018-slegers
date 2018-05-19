@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationConfig {
 
     @Bean
-    public StudyTrackerService tservice(){
+    public StudyTrackerService service(){
         return new StudyTrackerService();
     }
 }
