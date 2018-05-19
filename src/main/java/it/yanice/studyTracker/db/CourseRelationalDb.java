@@ -6,6 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 
 public class CourseRelationalDb implements CourseDb {
@@ -13,6 +15,11 @@ public class CourseRelationalDb implements CourseDb {
     EntityManager entityManager;
 
     public CourseRelationalDb(){
+        try {
+            DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         entityManagerFactory = Persistence.createEntityManagerFactory("ISTUDY");
         entityManager = entityManagerFactory.createEntityManager();
     }
