@@ -27,7 +27,7 @@ public class CourseRelationalDb implements CourseDb {
         } catch (InstantiationException e) {
             e.printStackTrace();
         }
-        entityManagerFactory = Persistence.createEntityManagerFactory("ISTUDY");
+        entityManagerFactory = Persistence.createEntityManagerFactory("db");
         entityManager = entityManagerFactory.createEntityManager();
     }
 
