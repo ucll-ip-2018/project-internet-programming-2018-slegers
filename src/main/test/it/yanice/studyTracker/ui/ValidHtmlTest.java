@@ -16,6 +16,8 @@ public class ValidHtmlTest {
 
     @Before
     public void setUp() {
+        //Gelieve de laatst versie van deze drive in deze folder te plaatsen
+        // werkt enkel en alleen maar op mac
         System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
         driver = new ChromeDriver();
     }
@@ -29,7 +31,8 @@ public class ValidHtmlTest {
     public void isValidHtml() {
         driver.get("https://validator.w3.org/#validate_by_uri+with_options");
         WebElement invulveld = driver.findElement(By.id("uri"));
-        invulveld.sendKeys("http://193.191.177.8:10838/studyTracker/index.htmd");
+        invulveld.click();
+        invulveld.sendKeys("http://193.191.177.8:10838/studyTracker/index.htm");
 
         Select dropdown = new Select(driver.findElement(By.id("uri-doctype")));
         dropdown.selectByValue("HTML5");
@@ -39,7 +42,6 @@ public class ValidHtmlTest {
 
         WebElement pass = driver.findElement(By.cssSelector("p.success"));
         assertEquals("Document checking completed. No errors or warnings to show.", pass.getText());
-
     }
 
 }
