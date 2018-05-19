@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: yanice
@@ -13,9 +14,10 @@
 <div class="left">
     <nav class="menu">
         <ul>
-            <li> <a href="${pageContext.request.contextPath}/index.htm"> Home </a> </li>
-            <li> <a href="${pageContext.request.contextPath}/Courses.htm"> Vakken </a> </li>
-            <li> <a href="/studyTracker/Studymoment.htm"> Studiemomenten </a>  </li>
+            <li> <a href="<c:url value="${'/index.htm'}"/>"> Vakken </a> </li>
+            <li> <a href="<c:url value="${'/Courses.htm'}"/>"> Vakken </a> </li>
+            <li> <a href="<c:url value="${'Studymoment.htm'}"/>"> Studiemomenten </a>  </li>
+
         </ul>
     </nav>
 </div>
