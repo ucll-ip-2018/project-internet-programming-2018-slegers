@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="top">
-    <img src="${pageContext.request.contextPath}/img/logo2.png" class="logo"/>
+    <img src="${pageContext.request.contextPath}/img/logo2.png" class="logo" alt="logo"/>
     <div class="title"><h1>Home</h1> </div>
 </div>
 <div class="left">
