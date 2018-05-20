@@ -2,15 +2,24 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-    <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="db">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>it.yanice.studyTracker.domain.Cours</class>
-        <properties>
+       <!-- <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:derby://193.191.177.8:10836/db;create=true"/>
             <property name="javax.persistence.jdbc.user" value="app"/>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
             <property name="javax.persistence.jdbc.password" value="app"/>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties> -->
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://databanken.ucll.be:61718/projektwerk?sslmode=require" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="local_r0456491" /> <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="JDZùtgDRèASçA&quot;s" /> <!-- DB Password -->
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.jdbc.useSSL" value="true" />
+            <property name="javax.persistence.jdbc.requireSSL" value="true" />
         </properties>
     </persistence-unit>
 </persistence>
