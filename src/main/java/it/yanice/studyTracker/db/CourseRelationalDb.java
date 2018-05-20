@@ -2,10 +2,7 @@ package it.yanice.studyTracker.db;
 
 import it.yanice.studyTracker.domain.Cours;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
@@ -33,17 +30,19 @@ public class CourseRelationalDb implements CourseDb {
 
     @Override
     public void insert(Cours cours) {
-        entityManager.getTransaction().begin();
+        EntityTransaction tx = entityManager.getTransaction();
+        tx.begin();
         entityManager.persist(cours);
-        entityManager.getTransaction().commit();
+        tx.commit();
     }
 
     @Override
     public void delete(int cours) {
-        entityManager.getTransaction().begin();
+        EntityTransaction tx = entityManager.getTransaction();
+        tx.begin();
         Query q = entityManager.createQuery("delete from Cours c where c.id = :name", Cours.class);
         q.setParameter("name", cours).executeUpdate();
-        entityManager.getTransaction().commit();
+        tx.commit();
     }
 
     @Override
@@ -61,7 +60,6 @@ public class CourseRelationalDb implements CourseDb {
 
     @Override
     public Cours getCours(int name) {
-
        Query q = entityManager.createQuery("Select c from Cours c where c.id = :name", Cours.class);
        return (Cours) q.setParameter("name",name).getSingleResult();
     }
