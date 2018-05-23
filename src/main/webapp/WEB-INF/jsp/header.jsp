@@ -16,7 +16,7 @@
         <ul>
             <li> <a href="<c:url value="${'/index.htm'}"/>"> Home </a> </li>
             <li> <a href="<c:url value="${'/Courses.htm'}"/>"> Vakken </a> </li>
-           <!-- <li> <a href="<c:url value="${'/Studymoment.htm'}"/>"> Studiemomenten </a>  </li> -->
+            <li> <a href="<c:url value="${'/Studymoment.htm'}"/>"> Studiemomenten </a>  </li>
 
         </ul>
     </nav>

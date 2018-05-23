@@ -27,7 +27,7 @@
             <br>
             <input type="date" name="date" value="date">
             <br>
-            <input id="save" type="submit" value="Submit">
+            <input id="save" type="submit" value="Submit" disabled>
 
         </form>
     </div>
